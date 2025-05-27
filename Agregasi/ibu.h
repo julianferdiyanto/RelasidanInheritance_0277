@@ -1,4 +1,4 @@
-#ifnder IBU_H
+#ifndef IBU_H
 #define IBU_H
 
 class ibu {
@@ -6,7 +6,7 @@ class ibu {
         string nama;
         vector<anak*> daftar_anak;
 
-        ibu (string pNma): nama (pNama){
+        ibu (string pNama): nama (pNama){
             cout << "Ibu \"" << nama << "\" ada\n";
         }
 
@@ -16,7 +16,7 @@ class ibu {
         void tambahAnak(anak*);
         void cetakAnak();
 };
-void ibu::tambahAnak() {
+void ibu::tambahAnak(anak* pAnak) {
     daftar_anak.push_back(pAnak);
 }
 void ibu::cetakAnak() {
